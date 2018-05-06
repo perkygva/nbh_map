@@ -12,7 +12,7 @@ It's that simple!
 ## Functionality
 The map comes loaded with the main points of interest, along with a list on the left sidebar. Clicking on the element in the list pop's up the marker of the location on the map with its respective name and address.
 You can also click on a marker to see the details of the place.
-In the search-bar(top right) you can filter by the name of the attraction (must be exact name!).
+In the search-bar you can filter by the name of the attraction.
 
 ## Future improvements
 Fix streetview add-on.
