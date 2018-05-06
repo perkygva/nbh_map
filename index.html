@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Map</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/mystyle.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <span class="nav-title">Geneva Attractions</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid">
+      <div class="options-box">
+        <h1>Main Places to See!</h1>
+        <input id="show-listings" type="button" value="Show Listings">
+        <input id="hide-listings" type="button" value="Hide Listings">
+        <hr>
+        <div class="list-group list-group-item-action">
+          <input placeholder="Filter attractions" class="form-control" input="text"
+                  data-bind="textInput:searchItem, valueupdate: 'afterkeydown'"/>
+        </div>
+        <hr>
+          <div class="list-group" data-bind="foreach: locationList">
+                <a href="#" class="list-group-item list-group-item-action"
+                data-bind="text: title, click: show"></a>
+            </div>
+      </div>
+      <div id="map"></div>
+    </main>
+
+
+
+    <!-- Knockout.js -->
+    <script src="js/knockout.min.js"></script>
+    <script src="js/locationList.js"></script>
+    <script src="js/main.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyBPmAgzoIpZaOPQHx8Wq1_8tBoHEdfHHDU&callback=initMap" onerror="googleMapsError()">
+    </script>
+
+  </body>
+</html>
